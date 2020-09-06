@@ -15,6 +15,14 @@ router.get('/', function(req, res){
 res.json(jsondata);
  
 })
+ 
+app.listen(3000, () =>{
+    console.log('listening to port 3000');
+});
+app.use('/', router);
+app.listen(port);
+
+
 // router.post('/postdata', function(req,res){
 // if(req.body.Id && req.body.Title)
 // {
@@ -71,8 +79,7 @@ res.json(jsondata);
 //     }
 // });
  
-app.use('/api', router);
-app.listen(port);
+
 // var bodyParser = require('body-parser');
 // var jsonData = require('./movies.json');
 // var und = require('underscore');
